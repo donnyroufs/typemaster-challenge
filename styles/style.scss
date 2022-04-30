@@ -1,25 +1,42 @@
 @import "./reset";
 @import "./theme";
+@import "./theme-utilities";
 @import "./utilities";
+@import "./spacing";
+
+@import "./blocks/button";
+@import "./blocks/hero";
+@import "./blocks/watermark";
+@import "./blocks/showcase";
+@import "./blocks/icon";
+@import "./blocks/features";
 
 body {
-  color: var(--color-tertiary);
+  color: var(--color-tertiary-shade);
   line-height: 1.625rem;
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 16px;
+  margin-top: 2rem;
 }
 
-.h1,
+h1,
 h2,
 h3 {
+  color: var(--color-tertiary);
+  text-transform: uppercase;
   font-family: var(--font-sans);
-  font-weight: black;
+  font-weight: 800;
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
+
+  @include query("lg") {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 h2 {
@@ -30,4 +47,10 @@ h2 {
 h3 {
   font-size: 1.5rem;
   line-height: 1.75rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
 }

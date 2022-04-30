@@ -1,0 +1,10 @@
+.icon {
+  height: 65px;
+  width: 65px;
+  margin-inline: auto;
+
+  @include query("md") {
+    margin-inline: unset;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,107 @@
+.showcase {
+  position: relative;
+  flex-direction: column;
+
+  &__image-left,
+  &__image-right {
+    background-size: cover;
+
+    height: 193px;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  &__image-left {
+    position: relative;
+    margin-left: -2.75rem;
+    width: 129px;
+    background-image: url("../public/mobile/image-phone-and-keyboard.jpg");
+
+    @include query("md") {
+      margin: 0;
+      height: 320px;
+      width: 214px;
+      background-image: url("../public/tablet/image-phone-and-keyboard.jpg");
+    }
+
+    @include query("lg") {
+      background-image: url("../public/desktop/image-phone-and-keyboard.jpg");
+      height: 480px;
+      width: 255px;
+    }
+  }
+
+  &__image-right {
+    background-image: url("../public/mobile/image-glass-and-keyboard.jpg");
+    width: 220px;
+
+    @include query("md") {
+      background-image: url("../public/tablet/image-glass-and-keyboard.jpg");
+      margin-left: 2rem;
+      height: 320px;
+      width: 445px;
+    }
+
+    @include query("lg") {
+      background-image: url("../public/desktop/image-glass-and-keyboard.jpg");
+      height: 480px;
+      width: 445px;
+    }
+  }
+
+  &__info {
+    @include query("md") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    @include query("lg") {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 7.8rem;
+    }
+  }
+
+  &__title {
+    @include query("md") {
+      word-spacing: 0;
+      max-width: 17ch;
+    }
+
+    @include query("lg") {
+      word-spacing: 0;
+    }
+  }
+
+  &__text {
+    @include query("md") {
+      margin-top: 0;
+      width: 100%;
+    }
+
+    @include query("lg") {
+      margin-top: 2rem;
+    }
+  }
+
+  @include query("lg") {
+    overflow: visible;
+  }
+
+  @include query("lg") {
+    flex-direction: row;
+  }
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: multiply;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+}

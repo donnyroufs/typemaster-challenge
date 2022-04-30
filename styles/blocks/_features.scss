@@ -1,0 +1,14 @@
+.features {
+  @include query("md") {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, minmax(200px, 400px));
+    gap: 2rem;
+    column-gap: 4rem;
+    text-align: left;
+  }
+
+  @include query("lg") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

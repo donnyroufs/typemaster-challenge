@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+
+  &__left {
+    align-items: center;
+    max-width: 375px;
+
+    @include query("md") {
+      margin-top: 0;
+      max-width: 400px;
+      flex: 2;
+    }
+  }
+
+  &__right {
+    flex: 1;
+
+    @include query("lg") {
+      max-width: 540px;
+    }
+  }
+
+  &__image {
+    background-image: url("../public/mobile/image-keyboard.jpg");
+    background-size: cover;
+
+    height: 331px;
+    width: calc(100% + 2rem);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    @include query("md") {
+      margin: 0;
+      // transform: translateX(2rem);
+      margin-left: 2rem;
+      height: 425px;
+      background-image: url("../public/tablet/image-keyboard.jpg");
+    }
+
+    @include query("lg") {
+      transform: translateX(0);
+      height: 480px;
+      background-image: url("../public/desktop/image-keyboard.jpg");
+    }
+  }
+
+  @include query("md") {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include query("lg") {
+    overflow: visible;
+  }
+}

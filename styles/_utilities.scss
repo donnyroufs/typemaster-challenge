@@ -1,69 +1,101 @@
 @import "./theme";
 
-@mixin query($breakpoint) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-wrap-column {
+  flex-flow: column wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1110px;
+  padding-inline: 1.5rem;
+
+  @include query("md") {
+    margin-inline: auto;
+  }
+}
+
+.splitter {
+  > :last-child {
+    margin-top: 1rem;
+  }
+
+  display: flex;
+
+  @include query("md") {
+    > * {
+      flex-grow: 1;
+    }
+
+    > :last-child {
+      margin-top: 0;
+      margin-left: 1rem;
+      min-width: 22rem;
     }
   }
-
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
-  }
 }
 
-.color-primary {
-  color: var(--color-primary);
+.wrapper {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
 }
 
-.color-secondary {
-  color: var(--color-secondary);
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
-.color-tertiary {
-  color: var(--color-tertiary);
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.color-tertiary-shade {
-  color: var(--color-tertiary-shade);
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
-.color-light-gray {
-  color: var(--color-light-gray);
+.text-align-left {
+  text-align: center;
 }
 
-.color-light-gray {
-  color: var(--color-white);
+.text-align-center {
+  text-align: center;
 }
 
-.bg-primary {
-  background-color: var(--color-primary);
+.one-word-per-line {
+  word-spacing: 100vw;
 }
 
-.bg-secondary {
-  background-color: var(--color-secondary);
+.border-radius {
+  border-radius: 16px;
 }
 
-.bg-tertiary {
-  background-color: var(--color-tertiary);
-}
-
-.bg-tertiary-shade {
-  background-color: var(--color-tertiary-shade);
-}
-
-.bg-light-gray {
-  background-color: var(--color-light-gray);
-}
-
-.bg-light-gray {
-  background-color: var(--color-white);
-}
-
-.font-sans {
-  font-family: var(--font-sans);
+.grid {
+  display: grid;
 }

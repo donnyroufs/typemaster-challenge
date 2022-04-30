@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,45 +12,74 @@
 
     <title>Frontend Mentor | Typemaster pre-launch landing page</title>
     <link rel="stylesheet" href="./styles/style.scss" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-  <body class="">
-    <header>
+  <body class="flow overflow-x-hidden">
+    <header
+      class="d-flex space-between container flex-items-center"
+      data-aos="fade-left"
+    >
       <a href="/">
         <img src="public/shared/logo.svg" alt="type master" />
       </a>
 
-      <button>Pre-order now</button>
+      <button class="button" data-variant="secondary">Pre-order now</button>
     </header>
 
-    <main id="hero">
-      <div>
-        <h1>Typemaster keyboard</h1>
+    <main
+      class="hero | flow container overflow-hidden"
+      style="--flow-space: 4rem"
+      data-aos="fade-down"
+    >
+      <img
+        src="public/shared/pattern-square.svg"
+        alt="decoration"
+        class="watermark"
+      />
+      <div class="hero__left | flow d-flex" style="--flow-space: 2rem">
+        <div class="flow">
+          <h1 style="--flow-space: 4rem">Typemaster keyboard</h1>
 
-        <p>
-          Improve your productivity and gaming without breaking the bank.
-          Upgrade to a high quality mechanical typing experience.
-        </p>
+          <p class="color-tertiary-shade">
+            Improve your productivity and gaming without breaking the bank.
+            Upgrade to a high quality mechanical typing experience.
+          </p>
 
-        <footer>
-          <button>Pre-order now</button>
-          <button>Release on 5/27</button>
-        </footer>
-      </div>
-      <div class="">
-        <img src="public/mobile/image-keyboard.jpg" />
-      </div>
-    </main>
-
-    <section id="">
-      <div>
-        <div class="">
-          <img src="public/mobile/image-phone-and-keyboard.jpg" />
-          <img src="public/mobile/image-glass-and-keyboard.jpg" />
+          <footer>
+            <button class="button" data-variant="primary">Pre-order now</button>
+            <button class="button" data-variant="link">Release on 5/27</button>
+          </footer>
         </div>
       </div>
-      <div>
-        <h2>Mechanical wireless keyboard</h2>
-        <p>
+      <div class="hero__right hero__image"></div>
+    </main>
+
+    <section
+      class="showcase | flow text-align-center d-flex container overflow-hidden"
+      style="--flow-space: 4rem"
+    >
+      <div class="d-flex">
+        <img
+          src="public/shared/pattern-square.svg"
+          alt="decoration"
+          data-el="showcase"
+          class="watermark"
+          data-aos="fade-right"
+        />
+        <div class="showcase__image-left | mr-6" data-aos="fade-right">
+          <div class="overlay"></div>
+        </div>
+        <div class="showcase__image-right" data-aos="fade-right"></div>
+      </div>
+      <div
+        class="showcase__info | flow"
+        style="--flow-space: 4rem"
+        data-aos="fade-up"
+      >
+        <h2 class="showcase__title | one-word-per-line">
+          Mechanical wireless keyboard
+        </h2>
+        <p class="showcase__text" style="--flow-space: 1.5rem">
           The Typemaster keyboard boasts top-notch build and practical design.
           It offers a wide variety of switches and keycaps, along with reliable
           wireless connectivity.
@@ -59,45 +87,72 @@
       </div>
     </section>
 
-    <section id="features">
-      <div>
+    <section
+      class="features | container text-align-center flow"
+      style="--flow-space: 3rem"
+    >
+      <div class="flow mt-6" data-aos="zoom-out">
         <img
           src="public/shared/icon-compatible.svg"
-          alt=""
-          class="bg-primary"
+          alt="is compatible"
+          class="icon | bg-primary p-4 border-radius"
         />
-        <h3>Highly compatible</h3>
-        <p>
+        <h3>
+          <div>Highly</div>
+          compatible
+        </h3>
+        <p style="--flow-space: 1rem">
           Easy to use and works well with all major computer brands, gaming
           consoles and mobile devices. Plug & play, no installation or driver
           needed.
         </p>
       </div>
 
-      <div>
-        <img src="public/shared/icon-bluetooth.svg" alt="" class="bg-primary" />
-        <h3>Wireless with bluetooth</h3>
-        <p>
+      <div class="flow" data-aos="zoom-out" data-aos-delay="50">
+        <img
+          src="public/shared/icon-bluetooth.svg"
+          alt="includes bluetooth"
+          class="icon | bg-primary p-4 border-radius"
+        />
+        <h3>
+          <div>Wireless</div>
+          with bluetooth
+        </h3>
+        <p style="--flow-space: 1rem">
           Powerful 2.4G RF technology allows you to connect the cordless
           keyboard from up to 30ft away. Simply plug the unifying receiver into
           your computer.
         </p>
       </div>
 
-      <div>
-        <img src="public/shared/icon-battery.svg" alt="" class="bg-primary" />
-        <h3>High capacity battery</h3>
-        <p>
+      <div class="flow" data-aos="zoom-out" data-aos-delay="100">
+        <img
+          src="public/shared/icon-battery.svg"
+          alt="long living"
+          class="icon | bg-primary p-4 border-radius"
+        />
+        <h3>
+          <div>High capacity</div>
+          battery
+        </h3>
+        <p style="--flow-space: 1rem">
           Equipped with a long-lasting built-in battery, you’ll never have to
           spend a dime on replaceable ones.  Enjoy 40 hours of usage time
           between charges.
         </p>
       </div>
 
-      <div>
-        <img src="public/shared/icon-light.svg" alt="" class="bg-primary" />
-        <h3>RGB backlit modes</h3>
-        <p>
+      <div class="flow" data-aos="zoom-out" data-aos-delay="150">
+        <img
+          src="public/shared/icon-light.svg"
+          alt="ligh mode"
+          class="icon | bg-primary p-4 border-radius"
+        />
+        <h3>
+          <div>RGB backlit</div>
+          modes
+        </h3>
+        <p style="--flow-space: 1rem">
           Choose from 4 backlight brightness levels and adjustable breathing
           speed. Each key glows intensely in the dark and helps you type in low
           light conditions.
@@ -105,8 +160,12 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="mt-24 mb-12 text-align-center">
       <p><b>Typemaster 2021</b> | All Rights Reserved</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
