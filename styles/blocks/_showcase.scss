@@ -87,10 +87,6 @@
   }
 
   @include query("lg") {
-    overflow: visible;
-  }
-
-  @include query("lg") {
     flex-direction: row;
   }
 }

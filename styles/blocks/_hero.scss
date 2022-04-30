@@ -48,8 +48,4 @@
     display: flex;
     justify-content: space-between;
   }
-
-  @include query("lg") {
-    overflow: visible;
-  }
 }
